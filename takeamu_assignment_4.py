@@ -77,7 +77,7 @@ if choice in study_options:
 elif choice not in study_options:
     print("Invalid choice. Please select from the list.")
 
-print(f"\nUpdated GPA: {round(current_gpa, 2)}")
+print(f"Updated GPA: {round(current_gpa, 2)}")
 print(f"Updated Social Points: {social_points}")
 ready_status = "READY"
 ending = ready_status
