@@ -1,8 +1,8 @@
-student_name = "Tehcubelleh Keamu"
-current_gpa = 3.5
-study_hours = 20
-social_points = 40
-stress_level = 87
+student_name = input("Enter your name: ")
+current_gpa = float(input("Enter your current GPA 1.0-4.0: "))
+study_hours = int(input("Enter your study hours: "))
+social_points = int(input("Enter your social points: "))
+stress_level = int(input("Enter your stress level 1-100: "))
 
 print(f"Hello {student_name}")
 print("")
@@ -79,18 +79,20 @@ elif choice not in study_options:
 
 print(f"Updated GPA: {round(current_gpa, 2)}")
 print(f"Updated Social Points: {social_points}")
+print("")
 ready_status = "READY"
 ending = ready_status
 print("OKAY AND...Drumroll please")
+print("")
 if ready_status is not ending:
     print("You can't read or spell...")
 
 elif ready_status is ending:
     if current_gpa >= 3.7:
         print("ASSESSMENT: ACADEMIC EXCELLENCE!")
-    if stress_level < 75 and social_points >= 40:
-        print("ENDING 1: Academic warrior!")
-        print("You achieved a high GPA and maintained a healthy social life with low stress. You mastered the college challenge!")
+        if stress_level < 75 and social_points >= 40:
+            print("ENDING 1: Academic warrior!")
+            print("You achieved a high GPA and maintained a healthy social life with low stress. You mastered the college challenge!")
     elif stress_level >= 75 and social_points < 40:
         print("ENDING 2: I did it...*Faints*")
         print("You achieved a high GPA, but your high stress and low social points suggest severe burnout. Take a break—your mental health is failing!")
@@ -107,9 +109,9 @@ elif current_gpa >= 3.0 and current_gpa < 3.7:
         print("ENDING 5: One more thing... andddd done!")
         print("You passed the semester comfortably and maintained a manageable workload. Good, steady progress.")
 
-else:
+elif current_gpa <= 2.9:
     print("ASSESSMENT: ACADEMIC STRUGGLE.")
-    if stress_level >= 90:
+    if stress_level >= 90 and current_gpa <= 2.5:
         print("ENDING 6: Dropping out never looked so nice *maniac laughter*")
         print("Your low GPA combined with extreme stress suggests a critical semester failure. Intervention is required.")
     else:
